@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>LARP Master Schedule</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              larp: {
+                bg: '#f3f4f6',      /* Light Gray Background */
+                card: '#ffffff',    /* White Card */
+                primary: '#3b82f6', /* Blue */
+                accent: '#8b5cf6',  /* Violet */
+                success: '#22c55e', /* Green */
+                warning: '#f59e0b', /* Amber */
+                danger: '#ef4444',  /* Red */
+                muted: '#64748b',   /* Slate 500 */
+                dark: '#1e293b',    /* Slate 800 for dark text */
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f3f4f6;
+        color: #1e293b;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        /* Remove touch-action restrictions to allow browser-native zoom */
+        -webkit-text-size-adjust: 100%;
+      }
+      /* Custom scrollbar for horizontal scrolling */
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      .vertical-rl {
+        writing-mode: vertical-rl;
+      }
+      /* Ensure clickable items still feel responsive */
+      button, a {
+        touch-action: manipulation;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<!-- Google API Scripts -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://apis.google.com/js/api.js" async defer></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
